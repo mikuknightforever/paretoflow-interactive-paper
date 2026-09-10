@@ -1,0 +1,48 @@
+--- upstream/paretoflow.py
++++ vendor/paretoflow.py
+@@ -366,9 +366,9 @@
+                 scalarized_scores = torch.matmul(all_y, weights)
+ 
+                 # Select the candidate with the best scalarized score
+-                best_index = torch.argmax(scalarized_scores)
++                best_index = torch.argmin(scalarized_scores) # minimize objective losses
+                 best_x = all_x[best_index]
+-                best_score = scalarized_scores[best_index]
++                best_score = -scalarized_scores[best_index] # sampler compares negative losses
+ 
+                 # Add to Pareto set
+                 pareto_set.append((best_x, best_score))
+@@ -624,6 +624,8 @@
+             all_y=all_y,
+         )
+ 
++        self.record_archive(0.0, pareto_set)
++
+         # Calculate the neighborhood of the diverse samples
+         # shape: (batch_size, K)
+         neighborhood_indices = ParetoFlow._all_neighborhood_indices(
+@@ -709,6 +711,7 @@
+                             xl[0].unsqueeze(0).repeat(batch_size, 1),
+                             xu[0].unsqueeze(0).repeat(batch_size, 1),
+                         )
++                    self.record_archive(t, pareto_set)
+                     pbar.update(1)
+                     continue
+ 
+@@ -812,6 +815,7 @@
+                         )
+                 # Update x_t
+                 x_t = next_offspring
++                self.record_archive(t, pareto_set)
+                 pbar.update(1)
+ 
+         temp_pareto_set = [pareto_set[i][0] for i in range(batch_size)]
+@@ -825,7 +829,7 @@
+         res_y = []
+         with torch.no_grad():
+             for classifier in self.classifiers:
+-                res_y.append(-1 * classifier(res_x.to(device)))
++                res_y.append(classifier(res_x.to(device))) # return losses, not negative rewards
+         res_y = torch.stack(res_y, dim=1).squeeze()
+         res_x = res_x.cpu().detach().numpy()
+         res_y = res_y.cpu().detach().numpy()

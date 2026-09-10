@@ -1,0 +1,9 @@
+figure.pareto-panel{width:100%;min-height:0;background:transparent;container-type:inline-size}
+figure.pareto-panel>div>div:has(>iframe){width:100%!important;height:470px;padding-bottom:0!important;overflow:hidden;border:1px solid #dce5ed;border-radius:4px;background:#fff}
+figure.panel-evolution>div>div:has(>iframe){height:450px}
+figure.panel-guidance>div>div:has(>iframe){height:535px}
+figure.panel-method>div>div:has(>iframe){height:455px}
+figure.panel-paper>div>div:has(>iframe),figure.panel-neighbors>div>div:has(>iframe){height:490px}
+figure.pareto-panel>figcaption{margin-top:.75rem}
+@container(max-width:622px){figure.panel-design>div>div:has(>iframe){height:760px}figure.panel-ablation>div>div:has(>iframe){height:510px}}
+@container(max-width:560px){figure.panel-paper>div>div:has(>iframe),figure.panel-neighbors>div>div:has(>iframe){height:550px}figure.panel-guidance>div>div:has(>iframe){height:575px}figure.panel-method>div>div:has(>iframe){height:490px}}

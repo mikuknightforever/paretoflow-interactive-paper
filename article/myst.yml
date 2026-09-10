@@ -1,0 +1,16 @@
+version: 1
+project:
+  title: 'ParetoFlow: Guided Flows in Multi-Objective Optimization'
+  subtitle: A complete interactive reading demo — method, evidence and an inspectable experiment
+  description: Follow the complete paper through focused views, 52 benchmark tasks, all 23 published tables, and a separate local ZDT2 experiment.
+  bibliography:
+    - paper.bib
+  toc:
+    - file: paper.md
+    - file: appendix.md
+  exclude:
+    - README.md
+site:
+  template: article-theme
+  options:
+    style: article.css

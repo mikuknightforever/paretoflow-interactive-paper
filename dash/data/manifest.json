@@ -1,0 +1,45 @@
+{
+  "upstream": "https://github.com/mila-iqia/ParetoFlow",
+  "commit": "8ebefb37a9e4bd837cf6153d38d415f1d584a1a6",
+  "status": "Small CPU example; not a reproduction of paper tables",
+  "task": "ZDT2",
+  "dimensions": 30,
+  "objectives": 2,
+  "source_rows": 60000,
+  "training_rows": 12000,
+  "validation_rows": 2000,
+  "train_seed": 2026,
+  "sampling_seed": 81,
+  "training_steps": 1800,
+  "batch_size": 256,
+  "flow_width": 128,
+  "proxy_widths": [
+    64,
+    64
+  ],
+  "sampler_T": 161,
+  "offspring": 3,
+  "reference_directions": 400,
+  "t_threshold": 0.8,
+  "elapsed_seconds": 24.66,
+  "proxy_validation_mae": [
+    0.001845688390541859,
+    0.00718007875404843
+  ],
+  "versions": {
+    "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+    "numpy": "1.24.4",
+    "torch": "2.2.2+cpu"
+  },
+  "files": {
+    "zdt2-x-0.npy": "5192c8fefde6dd606f58b4b9def46adb2cda341f42594e53d34cc705160b494f",
+    "zdt2-y-0.npy": "6fdf6802a3806cd27227478faa08b406c56b560c3fb3fe849e1c5573b4002afa"
+  },
+  "sample_sha256": "e2fd27d849eac50228fb3315bdf3b2a638f5e82a5b34c77c9fb0e1c128ea00b5",
+  "final_hypervolumes": {
+    "guided": 6.7225611368195795,
+    "no_guidance": 6.70528296677456,
+    "no_neighbors": 6.64315680353804
+  },
+  "initial_hypervolume": 6.5835704452901025
+}
