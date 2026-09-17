@@ -1,0 +1,11 @@
+{
+  "name": "pareto-article-theme-fix",
+  "private": true,
+  "scripts": { "test": "node --test tests/hover-popover.test.cjs" },
+  "devDependencies": {
+    "@radix-ui/react-hover-card": "1.1.18",
+    "jsdom": "19.0.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  }
+}

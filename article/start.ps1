@@ -1,4 +1,7 @@
+param([int] $Port = 3003)
 $ErrorActionPreference = 'Stop'
-Set-Location (Split-Path -Parent $MyInvocation.MyCommand.Path)
-& npx --yes mystmd@1.10.1 start --port 3003
-exit $LASTEXITCODE
+$paretoArticleRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
+Set-Location $paretoArticleRoot
+. (Join-Path $paretoArticleRoot 'theme\myst-command.ps1')
+Initialize-ParetoArticleTheme -ArticleRoot $paretoArticleRoot
+Invoke-ParetoMyst -MystArguments @('start', '--port', "$Port")

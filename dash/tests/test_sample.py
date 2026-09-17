@@ -51,7 +51,7 @@ class SampleTests(unittest.TestCase):
     def callback(self,key,outputs,inputs,state,changed):
         return server.test_client().post('/_dash-update-component',json={'output':key,'outputs':outputs,'inputs':inputs,'state':state,'changedPropIds':[changed]})
 
-    def test_selection_and_replay_http(self):
+    def test_selection_http(self):
         response=self.callback('selection.data',{'id':'selection','property':'data'},[
             {'id':'cloud','property':'clickData','value':{'points':[{'customdata':17}]}},
             {'id':'cloud','property':'selectedData','value':None},
@@ -59,13 +59,56 @@ class SampleTests(unittest.TestCase):
             [{'id':'selection','property':'data','value':[200]}],'cloud.clickData')
         self.assertEqual(response.status_code,200)
         self.assertEqual(response.json['response']['selection']['data'],[17])
-        key=next(k for k in app.callback_map if 'clock.disabled' in k)
-        response=self.callback(key,[{'id':'clock','property':'disabled'},{'id':'play','property':'children'},{'id':'step','property':'value'}],
-            [{'id':'play','property':'n_clicks','value':1},{'id':'clock','property':'n_intervals','value':0}],
-            [{'id':'clock','property':'disabled','value':True},{'id':'step','property':'value','value':160}],'play.n_clicks')
-        self.assertEqual(response.status_code,200)
-        self.assertFalse(response.json['response']['clock']['disabled'])
-        self.assertEqual(response.json['response']['step']['value'],124)
+
+    def test_explorer_playback_has_one_clientside_writer(self):
+        client=server.test_client()
+        dependencies=client.get('/_dash-dependencies').json
+        targets={('clock','disabled'),('play','children'),('step','value')}
+        writers=[]
+        for key,spec in app.callback_map.items():
+            outputs=spec['output'] if isinstance(spec['output'],list) else [spec['output']]
+            properties={(out.component_id,out.component_property) for out in outputs}
+            if properties & targets:
+                self.assertEqual(properties,targets)
+                self.assertNotIn('callback',spec,'Playback must not retain a Python output writer')
+                writers.append(key)
+        self.assertEqual(len(writers),1)
+        controls=[dependency for dependency in dependencies if dependency['output']==writers[0]]
+        self.assertEqual(len(controls),1,'Do not register both old and new playback callbacks')
+        control=controls[0]
+        self.assertEqual(control['clientside_function'],{
+            'namespace':'paretoPlayback','function_name':'explorerControl'})
+        self.assertEqual(control['inputs'],[
+            {'id':'play','property':'n_clicks'},{'id':'clock','property':'n_intervals'}])
+        self.assertEqual(control['state'],[
+            {'id':'clock','property':'disabled'},{'id':'step','property':'value'}])
+        self.assertTrue(control['prevent_initial_call'])
+
+        # Only playback control moves to the browser. Figure generation still
+        # uses the existing server callback and its selected recorded step.
+        render_key=next(key for key in app.callback_map if 'cloud.figure' in key)
+        self.assertTrue(callable(app.callback_map[render_key].get('callback')))
+        render_dependency=next(item for item in dependencies if item['output']==render_key)
+        self.assertIsNone(render_dependency['clientside_function'])
+        self.assertIn({'id':'step','property':'value'},render_dependency['inputs'])
+
+        def component_props(node,component_id):
+            if isinstance(node,dict):
+                if node.get('props',{}).get('id')==component_id:
+                    return node['props']
+                for child in node.values():
+                    found=component_props(child,component_id)
+                    if found is not None:return found
+            elif isinstance(node,list):
+                for child in node:
+                    found=component_props(child,component_id)
+                    if found is not None:return found
+            return None
+
+        clock=component_props(client.get('/_dash-layout').json,'clock')
+        self.assertIsNotNone(clock)
+        self.assertEqual(clock['interval'],350)
+        self.assertTrue(clock['disabled'])
 
     def test_http_routes(self):
         c=server.test_client()

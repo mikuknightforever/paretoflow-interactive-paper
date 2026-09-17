@@ -1,0 +1,349 @@
+{
+  "generated_utc": "2026-09-17T03:18:32.155840+00:00",
+  "status": "passed",
+  "scope": "Compiled MyST mdast and embedded KaTeX output; source DOM comparison for all paragraphs, algorithm lines, and all table cells. This is a structural/rendered-content audit, not a browser screenshot layout audit.",
+  "normalization": "Whitespace, zero-width URL line breaks, adjacent math delimiters and MyST's standalone numeric/plus-minus inline-math-to-text simplification are normalized. Formula TeX and table cell order are retained.",
+  "files": [
+    {
+      "source": "article\\paper.md",
+      "compiled_ast": "article\\_build\\site\\content\\index.json",
+      "source_sha256": "c8865f9b6fe674c6c1e771b611091f0782076d617f1d97c28135416061543f27",
+      "compiled_ast_sha256": "9079a8b6b8f4c47aaaf5605f97cc9ced4f47915bc5ee971880888e9f9889336a",
+      "source_mtime": 1789614736.1620839,
+      "compiled_mtime": 1789615070.8291361,
+      "ast_node_types": {
+        "root": 1,
+        "block": 1,
+        "div": 7,
+        "paragraph": 191,
+        "strong": 134,
+        "text": 1353,
+        "link": 59,
+        "comment": 402,
+        "inlineMath": 360,
+        "break": 70,
+        "heading": 18,
+        "emphasis": 123,
+        "crossReference": 152,
+        "footnoteReference": 2,
+        "container": 8,
+        "image": 2,
+        "caption": 8,
+        "list": 1,
+        "listItem": 3,
+        "math": 13,
+        "iframe": 4,
+        "table": 2,
+        "tableRow": 30,
+        "tableCell": 203,
+        "underline": 1,
+        "footnoteDefinition": 2
+      }
+    },
+    {
+      "source": "article\\appendix.md",
+      "compiled_ast": "article\\_build\\site\\content\\appendix.json",
+      "source_sha256": "058287659efc68787a9751d8c66a4efe2a8c5b1b591f9d41a5534325b356ca3c",
+      "compiled_ast_sha256": "1f572ae5c52bc725d176c1d6624ad4e4f593d21091f045b9dbfe270b9676d727",
+      "source_mtime": 1789613383.7404218,
+      "compiled_mtime": 1789615070.8444455,
+      "ast_node_types": {
+        "root": 1,
+        "block": 1,
+        "div": 4,
+        "paragraph": 63,
+        "text": 1464,
+        "link": 2,
+        "comment": 160,
+        "heading": 14,
+        "emphasis": 5,
+        "crossReference": 49,
+        "math": 4,
+        "inlineMath": 2474,
+        "container": 31,
+        "caption": 31,
+        "table": 21,
+        "tableRow": 344,
+        "tableCell": 3059,
+        "image": 11,
+        "strong": 117
+      }
+    }
+  ],
+  "checks": {
+    "build_not_older_than_source_checked": 2,
+    "build_not_older_than_source_passed": 2,
+    "display_math_matches_markdown_checked": 2,
+    "display_math_matches_markdown_passed": 2,
+    "source_marker_inventory_checked": 1,
+    "source_marker_inventory_passed": 1,
+    "source_paragraph_rendering_checked": 100,
+    "source_paragraph_rendering_passed": 100,
+    "algorithm_line_rendering_checked": 21,
+    "algorithm_line_rendering_passed": 21,
+    "original_figure_count_checked": 1,
+    "original_figure_count_passed": 1,
+    "original_image_count_checked": 1,
+    "original_image_count_passed": 1,
+    "original_image_sources_checked": 1,
+    "original_image_sources_passed": 1,
+    "table_count_checked": 1,
+    "table_count_passed": 1,
+    "display_math_count_checked": 1,
+    "display_math_count_passed": 1,
+    "katex_render_errors_checked": 1,
+    "katex_render_errors_passed": 1,
+    "figure_has_real_caption_checked": 12,
+    "figure_has_real_caption_passed": 12,
+    "figure11_shared_caption_checked": 1,
+    "figure11_shared_caption_passed": 1,
+    "figure11_image_count_checked": 1,
+    "figure11_image_count_passed": 1,
+    "figure11_no_subfigures_checked": 1,
+    "figure11_no_subfigures_passed": 1,
+    "figure11_no_auto_subcontainers_checked": 1,
+    "figure11_no_auto_subcontainers_passed": 1,
+    "table_caption_checked": 23,
+    "table_caption_passed": 23,
+    "table_rows_checked": 23,
+    "table_rows_passed": 23,
+    "table_column_count_checked": 374,
+    "table_column_count_passed": 374,
+    "table_cell_rendering_checked": 3262,
+    "table_cell_rendering_passed": 3262,
+    "unresolved_crossreferences_checked": 1,
+    "unresolved_crossreferences_passed": 1,
+    "unparsed_dollars_in_rendered_text_checked": 1,
+    "unparsed_dollars_in_rendered_text_passed": 1
+  },
+  "errors": [],
+  "counts": {
+    "original_figures": 12,
+    "original_images": 13,
+    "tables": 23,
+    "table_rows": 374,
+    "table_cells": 3262,
+    "display_equations": 17,
+    "inline_equations": 2834,
+    "all_katex_rendered_nodes": 2851,
+    "source_marked_blocks": 281
+  },
+  "figures": [
+    {
+      "label": "source-s1-f1",
+      "caption": "Figure 1: Motivation of Module 1 in (b) and Module 2 in (c).",
+      "caption_count": 1,
+      "image_count": 1,
+      "nested_figure_count": 0
+    },
+    {
+      "label": "source-s3-f2",
+      "caption": "Figure 2: Local filtering: samples outside the hypercone are filtered out as shown in (c).",
+      "caption_count": 1,
+      "image_count": 1,
+      "nested_figure_count": 0
+    },
+    {
+      "label": "source-a1-f5-fig1",
+      "caption": "Figure 3: Sticks and triangles are rank medians and means.",
+      "caption_count": 1,
+      "image_count": 1,
+      "nested_figure_count": 0
+    },
+    {
+      "label": "source-a1-f5-fig2",
+      "caption": "Figure 4: Sensitivity to the number of neighbors K.",
+      "caption_count": 1,
+      "image_count": 1,
+      "nested_figure_count": 0
+    },
+    {
+      "label": "source-a1-f5-fig3",
+      "caption": "Figure 5: Sensitivity to the mumber of offspring O.",
+      "caption_count": 1,
+      "image_count": 1,
+      "nested_figure_count": 0
+    },
+    {
+      "label": "source-a1-f8-fig1",
+      "caption": "Figure 6: Hypervolume as a function of t.",
+      "caption_count": 1,
+      "image_count": 1,
+      "nested_figure_count": 0
+    },
+    {
+      "label": "source-a1-f8-fig2",
+      "caption": "Figure 7: Sensitivity to the scaling factor of \\gamma.",
+      "caption_count": 1,
+      "image_count": 1,
+      "nested_figure_count": 0
+    },
+    {
+      "label": "source-a1-f8-fig3",
+      "caption": "Figure 8: Sensitivity to the noise factor g.",
+      "caption_count": 1,
+      "image_count": 1,
+      "nested_figure_count": 0
+    },
+    {
+      "label": "source-a1-f10-fig1",
+      "caption": "Figure 9: Reconstruction loss as a function of the time step t.",
+      "caption_count": 1,
+      "image_count": 1,
+      "nested_figure_count": 0
+    },
+    {
+      "label": "source-a1-f10-fig2",
+      "caption": "Figure 10: Sensitivity to the number of sampling steps T.",
+      "caption_count": 1,
+      "image_count": 1,
+      "nested_figure_count": 0
+    },
+    {
+      "label": "source-a1-f11",
+      "caption": "Figure 11: Illustrations of ParetoFlow on two tasks C-10/MOP1 and MO-Hopper.",
+      "caption_count": 1,
+      "image_count": 2,
+      "nested_figure_count": 0
+    },
+    {
+      "label": "source-a1-f12",
+      "caption": "Figure 12: C-10/MOP5 case study: (1) samples prioritizing prediction error and model complexity; (2) samples focusing on prediction error and hardware efficiency; (3) samples emphasizing prediction error, model complexity, and hardware efficiency.",
+      "caption_count": 1,
+      "image_count": 1,
+      "nested_figure_count": 0
+    }
+  ],
+  "tables": [
+    {
+      "label": "source-s4-t1",
+      "rows": 23,
+      "cells": 161
+    },
+    {
+      "label": "source-s4-t2",
+      "rows": 7,
+      "cells": 42
+    },
+    {
+      "label": "source-a1-t3",
+      "rows": 4,
+      "cells": 24
+    },
+    {
+      "label": "source-a1-t4",
+      "rows": 3,
+      "cells": 18
+    },
+    {
+      "label": "source-a1-t5",
+      "rows": 8,
+      "cells": 48
+    },
+    {
+      "label": "source-a1-t6",
+      "rows": 11,
+      "cells": 33
+    },
+    {
+      "label": "source-a1-t7",
+      "rows": 10,
+      "cells": 80
+    },
+    {
+      "label": "source-a1-t8",
+      "rows": 23,
+      "cells": 276
+    },
+    {
+      "label": "source-a1-t9",
+      "rows": 23,
+      "cells": 230
+    },
+    {
+      "label": "source-a1-t10",
+      "rows": 23,
+      "cells": 253
+    },
+    {
+      "label": "source-a1-t11",
+      "rows": 23,
+      "cells": 69
+    },
+    {
+      "label": "source-a1-t12",
+      "rows": 23,
+      "cells": 115
+    },
+    {
+      "label": "source-a1-t13",
+      "rows": 23,
+      "cells": 391
+    },
+    {
+      "label": "source-a1-t14",
+      "rows": 23,
+      "cells": 161
+    },
+    {
+      "label": "source-a1-t15",
+      "rows": 23,
+      "cells": 276
+    },
+    {
+      "label": "source-a1-t16",
+      "rows": 23,
+      "cells": 230
+    },
+    {
+      "label": "source-a1-t17",
+      "rows": 23,
+      "cells": 253
+    },
+    {
+      "label": "source-a1-t18",
+      "rows": 23,
+      "cells": 69
+    },
+    {
+      "label": "source-a1-t19",
+      "rows": 23,
+      "cells": 115
+    },
+    {
+      "label": "source-a1-t20",
+      "rows": 23,
+      "cells": 391
+    },
+    {
+      "label": "source-a1-t21",
+      "rows": 3,
+      "cells": 9
+    },
+    {
+      "label": "source-a1-t22",
+      "rows": 3,
+      "cells": 9
+    },
+    {
+      "label": "source-a1-t23",
+      "rows": 3,
+      "cells": 9
+    }
+  ],
+  "contribution_bullets": [
+    {
+      "id": "S1.I1.i1.p1.1",
+      "rendered_text": "We explore the use of generative modeling in offline MOO by introducing ParetoFlow, specifically designed to effectively steer flow sampling to approximate the Pareto front."
+    },
+    {
+      "id": "S1.I1.i2.p1.1",
+      "rendered_text": "We propose a multi-objective predictor guidance module that assigns a uniform weighted distribution to each sample, ensuring comprehensive coverage of the objective space."
+    },
+    {
+      "id": "S1.I1.i3.p1.1",
+      "rendered_text": "We establish a neighboring evolution module to enhance knowledge sharing among distributions with close weight vectors, which improves the sampling effectiveness."
+    }
+  ],
+  "known_fixed_issue": "Earlier build placed source-begin comments in empty caption nodes and actual figure captions into legend nodes. Current figure_has_real_caption checks prevent regression."
+}

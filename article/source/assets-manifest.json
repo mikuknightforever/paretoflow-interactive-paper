@@ -1,0 +1,696 @@
+{
+  "generated_utc": "2026-09-17T01:40:51.041772+00:00",
+  "source_html": "C:\\Users\\18285\\Documents\\ChatGPT\\evidence\\work\\pareto-original-edition-20260916\\source\\paper-v2.html",
+  "source_html_url": "https://arxiv.org/html/2412.03718v2",
+  "source_pdf": "C:\\Users\\18285\\Documents\\ChatGPT\\evidence\\work\\pareto-full\\sources\\paper-v2.pdf",
+  "source_pdf_url": "https://arxiv.org/pdf/2412.03718v2",
+  "license": "CC BY 4.0",
+  "source_version": "2412.03718v2",
+  "paper_asset_count": 13,
+  "pdf_assets_referenced_by_html": [],
+  "preservation_note": "All 13 paper image/object sources are preserved byte-for-byte (2 PNG, 11 SVG). The HTML references SVG vector versions, no standalone PDF figure assets. UI images are not article figures.",
+  "assets": [
+    {
+      "html_id": "S1.F1.g1",
+      "tag": "img",
+      "source": "2412.03718v2/Figure1.png",
+      "source_url": "https://arxiv.org/html/2412.03718v2/Figure1.png",
+      "filename": "Figure1.png",
+      "local_path": "article/content/figures/Figure1.png",
+      "myst_path": "figures/Figure1.png",
+      "top_level_figure_id": "S1.F1",
+      "closest_figure_id": "S1.F1",
+      "figure_number": 1,
+      "pdf_page": 2,
+      "caption": "Figure 1: Motivation of Module 1 in (b) and Module 2 in (c).",
+      "transform": "none; exact downloaded original bytes",
+      "bytes": 239795,
+      "sha256": "ea8f99fbee9b5336535127d17bf16998a7399f9f2e55fd752c434e885687dfea",
+      "content_type": "image/png",
+      "resolved_url": "https://arxiv.org/html/2412.03718v2/Figure1.png",
+      "download_attempts": [
+        {
+          "url": "https://arxiv.org/html/2412.03718v2/Figure1.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "html_id": "S3.F2.g1",
+      "tag": "img",
+      "source": "2412.03718v2/Figure2.png",
+      "source_url": "https://arxiv.org/html/2412.03718v2/Figure2.png",
+      "filename": "Figure2.png",
+      "local_path": "article/content/figures/Figure2.png",
+      "myst_path": "figures/Figure2.png",
+      "top_level_figure_id": "S3.F2",
+      "closest_figure_id": "S3.F2",
+      "figure_number": 2,
+      "pdf_page": 5,
+      "caption": "Figure 2: Local filtering: samples outside the hypercone are filtered out as shown in (c).",
+      "transform": "none; exact downloaded original bytes",
+      "bytes": 173065,
+      "sha256": "036933601ad31eccfb37831f553d0195fa43c7e02400562e4f5a1826f9be0a16",
+      "content_type": "image/png",
+      "resolved_url": "https://arxiv.org/html/2412.03718v2/Figure2.png",
+      "download_attempts": [
+        {
+          "url": "https://arxiv.org/html/2412.03718v2/Figure2.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F5.g1",
+      "tag": "object",
+      "source": "2412.03718v2/rank.svg",
+      "source_url": "https://arxiv.org/html/2412.03718v2/rank.svg",
+      "filename": "rank.svg",
+      "local_path": "article/content/figures/rank.svg",
+      "myst_path": "figures/rank.svg",
+      "top_level_figure_id": "A1.F5",
+      "closest_figure_id": "A1.F5.fig1",
+      "figure_number": 3,
+      "pdf_page": 17,
+      "caption": "Figure 3: Sticks and triangles are rank medians and means.",
+      "transform": "none; exact downloaded original bytes",
+      "bytes": 109468,
+      "sha256": "3f06fc54f1f4af02177bf8f1619ef3ca767346b417ae41c6347e6fce6bee4c49",
+      "content_type": "image/svg+xml",
+      "resolved_url": "https://export.arxiv.org/html/2412.03718v2/rank.svg",
+      "download_attempts": [
+        {
+          "url": "https://arxiv.org/html/2412.03718v2/rank.svg",
+          "status": 406
+        },
+        {
+          "url": "https://export.arxiv.org/html/2412.03718v2/rank.svg",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F5.g2",
+      "tag": "object",
+      "source": "2412.03718v2/condition_to_K.svg",
+      "source_url": "https://arxiv.org/html/2412.03718v2/condition_to_K.svg",
+      "filename": "condition_to_K.svg",
+      "local_path": "article/content/figures/condition_to_K.svg",
+      "myst_path": "figures/condition_to_K.svg",
+      "top_level_figure_id": "A1.F5",
+      "closest_figure_id": "A1.F5.fig2",
+      "figure_number": 4,
+      "pdf_page": 17,
+      "caption": "Figure 4: Sensitivity to the number of neighbors $K$.",
+      "transform": "none; exact downloaded original bytes",
+      "bytes": 41989,
+      "sha256": "e519d55e8b695a9144b33ea27c157eedad0ace5b7aef3b126bf8c27624796fc6",
+      "content_type": "image/svg+xml",
+      "resolved_url": "https://arxiv.org/html/2412.03718v2/condition_to_K.svg",
+      "download_attempts": [
+        {
+          "url": "https://arxiv.org/html/2412.03718v2/condition_to_K.svg",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F5.g3",
+      "tag": "object",
+      "source": "2412.03718v2/condition_to_O.svg",
+      "source_url": "https://arxiv.org/html/2412.03718v2/condition_to_O.svg",
+      "filename": "condition_to_O.svg",
+      "local_path": "article/content/figures/condition_to_O.svg",
+      "myst_path": "figures/condition_to_O.svg",
+      "top_level_figure_id": "A1.F5",
+      "closest_figure_id": "A1.F5.fig3",
+      "figure_number": 5,
+      "pdf_page": 17,
+      "caption": "Figure 5: Sensitivity to the mumber of offspring $O$.",
+      "transform": "none; exact downloaded original bytes",
+      "bytes": 41668,
+      "sha256": "e3ec324bccd11f2f12c6e3136afda2e16d45ac6711524724c317a6277506b4a3",
+      "content_type": "image/svg+xml",
+      "resolved_url": "https://arxiv.org/html/2412.03718v2/condition_to_O.svg",
+      "download_attempts": [
+        {
+          "url": "https://arxiv.org/html/2412.03718v2/condition_to_O.svg",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F8.g1",
+      "tag": "object",
+      "source": "2412.03718v2/hv_vs_t.svg",
+      "source_url": "https://arxiv.org/html/2412.03718v2/hv_vs_t.svg",
+      "filename": "hv_vs_t.svg",
+      "local_path": "article/content/figures/hv_vs_t.svg",
+      "myst_path": "figures/hv_vs_t.svg",
+      "top_level_figure_id": "A1.F8",
+      "closest_figure_id": "A1.F8.fig1",
+      "figure_number": 6,
+      "pdf_page": 18,
+      "caption": "Figure 6: Hypervolume as a function of $t$.",
+      "transform": "none; exact downloaded original bytes",
+      "bytes": 42375,
+      "sha256": "36f4a117f669205a9ba7040626977e0bfe399fda5ebc3d3cc51bc6d391a05f12",
+      "content_type": "image/svg+xml",
+      "resolved_url": "https://arxiv.org/html/2412.03718v2/hv_vs_t.svg",
+      "download_attempts": [
+        {
+          "url": "https://arxiv.org/html/2412.03718v2/hv_vs_t.svg",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F8.g2",
+      "tag": "object",
+      "source": "2412.03718v2/condition_to_Gamma.svg",
+      "source_url": "https://arxiv.org/html/2412.03718v2/condition_to_Gamma.svg",
+      "filename": "condition_to_Gamma.svg",
+      "local_path": "article/content/figures/condition_to_Gamma.svg",
+      "myst_path": "figures/condition_to_Gamma.svg",
+      "top_level_figure_id": "A1.F8",
+      "closest_figure_id": "A1.F8.fig2",
+      "figure_number": 7,
+      "pdf_page": 18,
+      "caption": "Figure 7: Sensitivity to the scaling factor of $\\gamma$.",
+      "transform": "none; exact downloaded original bytes",
+      "bytes": 39913,
+      "sha256": "859bb55db09ad1dec805a920ebc1d3e7913f4b4705efd519197f5bdee3e93684",
+      "content_type": "image/svg+xml",
+      "resolved_url": "https://export.arxiv.org/html/2412.03718v2/condition_to_Gamma.svg",
+      "download_attempts": [
+        {
+          "url": "https://arxiv.org/html/2412.03718v2/condition_to_Gamma.svg",
+          "status": 406
+        },
+        {
+          "url": "https://export.arxiv.org/html/2412.03718v2/condition_to_Gamma.svg",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F8.g3",
+      "tag": "object",
+      "source": "2412.03718v2/condition_to_Noise_Factor.svg",
+      "source_url": "https://arxiv.org/html/2412.03718v2/condition_to_Noise_Factor.svg",
+      "filename": "condition_to_Noise_Factor.svg",
+      "local_path": "article/content/figures/condition_to_Noise_Factor.svg",
+      "myst_path": "figures/condition_to_Noise_Factor.svg",
+      "top_level_figure_id": "A1.F8",
+      "closest_figure_id": "A1.F8.fig3",
+      "figure_number": 8,
+      "pdf_page": 18,
+      "caption": "Figure 8: Sensitivity to the noise factor $g$.",
+      "transform": "none; exact downloaded original bytes",
+      "bytes": 41173,
+      "sha256": "78c6f449b370eb0cd13dab6ef12c9523eca7e4f5972315cbbef09e1e3f8e356d",
+      "content_type": "image/svg+xml",
+      "resolved_url": "https://arxiv.org/html/2412.03718v2/condition_to_Noise_Factor.svg",
+      "download_attempts": [
+        {
+          "url": "https://arxiv.org/html/2412.03718v2/condition_to_Noise_Factor.svg",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F10.g1",
+      "tag": "object",
+      "source": "2412.03718v2/reconstruction_loss_decide_threshold.svg",
+      "source_url": "https://arxiv.org/html/2412.03718v2/reconstruction_loss_decide_threshold.svg",
+      "filename": "reconstruction_loss_decide_threshold.svg",
+      "local_path": "article/content/figures/reconstruction_loss_decide_threshold.svg",
+      "myst_path": "figures/reconstruction_loss_decide_threshold.svg",
+      "top_level_figure_id": "A1.F10",
+      "closest_figure_id": "A1.F10.fig1",
+      "figure_number": 9,
+      "pdf_page": 19,
+      "caption": "Figure 9: Reconstruction loss as a function of the time step $t$.",
+      "transform": "none; exact downloaded original bytes",
+      "bytes": 50013,
+      "sha256": "1fc4d2a6643303d95a47aea51517cf8ba682a8bcd9746165dbeea104b671bdb6",
+      "content_type": "image/svg+xml",
+      "resolved_url": "https://arxiv.org/html/2412.03718v2/reconstruction_loss_decide_threshold.svg",
+      "download_attempts": [
+        {
+          "url": "https://arxiv.org/html/2412.03718v2/reconstruction_loss_decide_threshold.svg",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F10.g2",
+      "tag": "object",
+      "source": "2412.03718v2/condition_to_Sampling_Step_T.svg",
+      "source_url": "https://arxiv.org/html/2412.03718v2/condition_to_Sampling_Step_T.svg",
+      "filename": "condition_to_Sampling_Step_T.svg",
+      "local_path": "article/content/figures/condition_to_Sampling_Step_T.svg",
+      "myst_path": "figures/condition_to_Sampling_Step_T.svg",
+      "top_level_figure_id": "A1.F10",
+      "closest_figure_id": "A1.F10.fig2",
+      "figure_number": 10,
+      "pdf_page": 19,
+      "caption": "Figure 10: Sensitivity to the number of sampling steps $T$.",
+      "transform": "none; exact downloaded original bytes",
+      "bytes": 42588,
+      "sha256": "a4dedac356d270a9265efbfad7ac5bf919435a6131e0d18713d3bb62f38066ed",
+      "content_type": "image/svg+xml",
+      "resolved_url": "https://export.arxiv.org/html/2412.03718v2/condition_to_Sampling_Step_T.svg",
+      "download_attempts": [
+        {
+          "url": "https://arxiv.org/html/2412.03718v2/condition_to_Sampling_Step_T.svg",
+          "status": 406
+        },
+        {
+          "url": "https://export.arxiv.org/html/2412.03718v2/condition_to_Sampling_Step_T.svg",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F11.g1",
+      "tag": "object",
+      "source": "2412.03718v2/illustration_c10mop1.svg",
+      "source_url": "https://arxiv.org/html/2412.03718v2/illustration_c10mop1.svg",
+      "filename": "illustration_c10mop1.svg",
+      "local_path": "article/content/figures/illustration_c10mop1.svg",
+      "myst_path": "figures/illustration_c10mop1.svg",
+      "top_level_figure_id": "A1.F11",
+      "closest_figure_id": "A1.F11.fig1",
+      "figure_number": 11,
+      "pdf_page": 25,
+      "caption": "Figure 11: Illustrations of ParetoFlow on two tasks C-10/MOP1 and MO-Hopper.",
+      "transform": "none; exact downloaded original bytes",
+      "bytes": 1239567,
+      "sha256": "51a4359e0b95a0406a6c6501d85d30f2c137cfefb22987515f90339c2e106d61",
+      "content_type": "image/svg+xml",
+      "resolved_url": "https://export.arxiv.org/html/2412.03718v2/illustration_c10mop1.svg",
+      "download_attempts": [
+        {
+          "url": "https://arxiv.org/html/2412.03718v2/illustration_c10mop1.svg",
+          "status": 406
+        },
+        {
+          "url": "https://export.arxiv.org/html/2412.03718v2/illustration_c10mop1.svg",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F11.g2",
+      "tag": "object",
+      "source": "2412.03718v2/illustration_mo_hopper_v2.svg",
+      "source_url": "https://arxiv.org/html/2412.03718v2/illustration_mo_hopper_v2.svg",
+      "filename": "illustration_mo_hopper_v2.svg",
+      "local_path": "article/content/figures/illustration_mo_hopper_v2.svg",
+      "myst_path": "figures/illustration_mo_hopper_v2.svg",
+      "top_level_figure_id": "A1.F11",
+      "closest_figure_id": "A1.F11.fig2",
+      "figure_number": 11,
+      "pdf_page": 25,
+      "caption": "Figure 11: Illustrations of ParetoFlow on two tasks C-10/MOP1 and MO-Hopper.",
+      "transform": "none; exact downloaded original bytes",
+      "bytes": 5803976,
+      "sha256": "1b637a496900ead77fb561529e9e38eaa7520eaf483f4b3fbf7d5f8a64c46b47",
+      "content_type": "image/svg+xml",
+      "resolved_url": "https://arxiv.org/html/2412.03718v2/illustration_mo_hopper_v2.svg",
+      "download_attempts": [
+        {
+          "url": "https://arxiv.org/html/2412.03718v2/illustration_mo_hopper_v2.svg",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F12.g1",
+      "tag": "object",
+      "source": "2412.03718v2/case_study_pie_chart.svg",
+      "source_url": "https://arxiv.org/html/2412.03718v2/case_study_pie_chart.svg",
+      "filename": "case_study_pie_chart.svg",
+      "local_path": "article/content/figures/case_study_pie_chart.svg",
+      "myst_path": "figures/case_study_pie_chart.svg",
+      "top_level_figure_id": "A1.F12",
+      "closest_figure_id": "A1.F12",
+      "figure_number": 12,
+      "pdf_page": 25,
+      "caption": "Figure 12: C-10/MOP5 case study: (1) samples prioritizing prediction error and model complexity; (2) samples focusing on prediction error and hardware efficiency; (3) samples emphasizing prediction error, model complexity, and hardware efficiency.",
+      "transform": "none; exact downloaded original bytes",
+      "bytes": 31164,
+      "sha256": "c5b7a1be88bcd84016b030c7e71ac810369b49f058131cc0522f2cf46964a816",
+      "content_type": "image/svg+xml",
+      "resolved_url": "https://arxiv.org/html/2412.03718v2/case_study_pie_chart.svg",
+      "download_attempts": [
+        {
+          "url": "https://arxiv.org/html/2412.03718v2/case_study_pie_chart.svg",
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "top_level_figures": [
+    {
+      "html_id": "S1.F1",
+      "figure_number": 1,
+      "caption": "Figure 1: Motivation of Module 1 in (b) and Module 2 in (c).",
+      "figure_numbers": [
+        1
+      ],
+      "pdf_pages": [
+        2
+      ],
+      "interpretation": "one numbered figure",
+      "panels": [
+        {
+          "html_figure_id": "S1.F1",
+          "asset_html_id": "S1.F1.g1",
+          "figure_number": 1,
+          "caption": "Figure 1: Motivation of Module 1 in (b) and Module 2 in (c).",
+          "file": "figures/Figure1.png"
+        }
+      ]
+    },
+    {
+      "html_id": "S3.F2",
+      "figure_number": 2,
+      "caption": "Figure 2: Local filtering: samples outside the hypercone are filtered out as shown in (c).",
+      "figure_numbers": [
+        2
+      ],
+      "pdf_pages": [
+        5
+      ],
+      "interpretation": "one numbered figure",
+      "panels": [
+        {
+          "html_figure_id": "S3.F2",
+          "asset_html_id": "S3.F2.g1",
+          "figure_number": 2,
+          "caption": "Figure 2: Local filtering: samples outside the hypercone are filtered out as shown in (c).",
+          "file": "figures/Figure2.png"
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F5",
+      "figure_number": null,
+      "caption": null,
+      "figure_numbers": [
+        3,
+        4,
+        5
+      ],
+      "pdf_pages": [
+        17
+      ],
+      "interpretation": "layout group of independently numbered figures; do not assign the group's HTML F-number as its printed figure number",
+      "panels": [
+        {
+          "html_figure_id": "A1.F5.fig1",
+          "asset_html_id": "A1.F5.g1",
+          "figure_number": 3,
+          "caption": "Figure 3: Sticks and triangles are rank medians and means.",
+          "file": "figures/rank.svg"
+        },
+        {
+          "html_figure_id": "A1.F5.fig2",
+          "asset_html_id": "A1.F5.g2",
+          "figure_number": 4,
+          "caption": "Figure 4: Sensitivity to the number of neighbors $K$.",
+          "file": "figures/condition_to_K.svg"
+        },
+        {
+          "html_figure_id": "A1.F5.fig3",
+          "asset_html_id": "A1.F5.g3",
+          "figure_number": 5,
+          "caption": "Figure 5: Sensitivity to the mumber of offspring $O$.",
+          "file": "figures/condition_to_O.svg"
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F8",
+      "figure_number": null,
+      "caption": null,
+      "figure_numbers": [
+        6,
+        7,
+        8
+      ],
+      "pdf_pages": [
+        18
+      ],
+      "interpretation": "layout group of independently numbered figures; do not assign the group's HTML F-number as its printed figure number",
+      "panels": [
+        {
+          "html_figure_id": "A1.F8.fig1",
+          "asset_html_id": "A1.F8.g1",
+          "figure_number": 6,
+          "caption": "Figure 6: Hypervolume as a function of $t$.",
+          "file": "figures/hv_vs_t.svg"
+        },
+        {
+          "html_figure_id": "A1.F8.fig2",
+          "asset_html_id": "A1.F8.g2",
+          "figure_number": 7,
+          "caption": "Figure 7: Sensitivity to the scaling factor of $\\gamma$.",
+          "file": "figures/condition_to_Gamma.svg"
+        },
+        {
+          "html_figure_id": "A1.F8.fig3",
+          "asset_html_id": "A1.F8.g3",
+          "figure_number": 8,
+          "caption": "Figure 8: Sensitivity to the noise factor $g$.",
+          "file": "figures/condition_to_Noise_Factor.svg"
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F10",
+      "figure_number": null,
+      "caption": null,
+      "figure_numbers": [
+        9,
+        10
+      ],
+      "pdf_pages": [
+        19
+      ],
+      "interpretation": "layout group of independently numbered figures; do not assign the group's HTML F-number as its printed figure number",
+      "panels": [
+        {
+          "html_figure_id": "A1.F10.fig1",
+          "asset_html_id": "A1.F10.g1",
+          "figure_number": 9,
+          "caption": "Figure 9: Reconstruction loss as a function of the time step $t$.",
+          "file": "figures/reconstruction_loss_decide_threshold.svg"
+        },
+        {
+          "html_figure_id": "A1.F10.fig2",
+          "asset_html_id": "A1.F10.g2",
+          "figure_number": 10,
+          "caption": "Figure 10: Sensitivity to the number of sampling steps $T$.",
+          "file": "figures/condition_to_Sampling_Step_T.svg"
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F11",
+      "figure_number": 11,
+      "caption": "Figure 11: Illustrations of ParetoFlow on two tasks C-10/MOP1 and MO-Hopper.",
+      "figure_numbers": [
+        11
+      ],
+      "pdf_pages": [
+        25
+      ],
+      "interpretation": "one numbered multi-panel figure",
+      "panels": [
+        {
+          "html_figure_id": "A1.F11.fig1",
+          "asset_html_id": "A1.F11.g1",
+          "figure_number": 11,
+          "caption": "Figure 11: Illustrations of ParetoFlow on two tasks C-10/MOP1 and MO-Hopper.",
+          "file": "figures/illustration_c10mop1.svg"
+        },
+        {
+          "html_figure_id": "A1.F11.fig2",
+          "asset_html_id": "A1.F11.g2",
+          "figure_number": 11,
+          "caption": "Figure 11: Illustrations of ParetoFlow on two tasks C-10/MOP1 and MO-Hopper.",
+          "file": "figures/illustration_mo_hopper_v2.svg"
+        }
+      ]
+    },
+    {
+      "html_id": "A1.F12",
+      "figure_number": 12,
+      "caption": "Figure 12: C-10/MOP5 case study: (1) samples prioritizing prediction error and model complexity; (2) samples focusing on prediction error and hardware efficiency; (3) samples emphasizing prediction error, model complexity, and hardware efficiency.",
+      "figure_numbers": [
+        12
+      ],
+      "pdf_pages": [
+        25
+      ],
+      "interpretation": "one numbered figure",
+      "panels": [
+        {
+          "html_figure_id": "A1.F12",
+          "asset_html_id": "A1.F12.g1",
+          "figure_number": 12,
+          "caption": "Figure 12: C-10/MOP5 case study: (1) samples prioritizing prediction error and model complexity; (2) samples focusing on prediction error and hardware efficiency; (3) samples emphasizing prediction error, model complexity, and hardware efficiency.",
+          "file": "figures/case_study_pie_chart.svg"
+        }
+      ]
+    }
+  ],
+  "excluded_interface_images": [
+    {
+      "tag": "img",
+      "source": "/static/base/1.0.1/images/icons/smileybones-small.svg",
+      "reason": "arXiv page interface image outside paper figures"
+    },
+    {
+      "tag": "img",
+      "source": "/static/base/1.0.1/images/arxiv-logo-primary-light.svg",
+      "reason": "arXiv page interface image outside paper figures"
+    },
+    {
+      "tag": "img",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==",
+      "reason": "arXiv page interface image outside paper figures"
+    },
+    {
+      "tag": "img",
+      "source": "/static/base/1.0.1/images/funders/simons-foundation.png",
+      "reason": "arXiv page interface image outside paper figures"
+    },
+    {
+      "tag": "img",
+      "source": "/static/base/1.0.1/images/funders/simons-foundation-international.png",
+      "reason": "arXiv page interface image outside paper figures"
+    },
+    {
+      "tag": "img",
+      "source": "/static/base/1.0.1/images/funders/schmidt-sciences.png",
+      "reason": "arXiv page interface image outside paper figures"
+    }
+  ],
+  "pdf_visual_verification": {
+    "method": "Rendered source PDF pages 2, 5, 17, 18, 19, 25 at 108 dpi and visually inspected labels, grouping, and captions.",
+    "result": "All HTML captions and figure numbers agree with the versioned original PDF, including the original typo 'mumber' in Figure 5.",
+    "groups": {
+      "S1.F1": {
+        "printed_figure_numbers": [
+          1
+        ],
+        "internal_panels": [
+          {
+            "label": "(a)",
+            "title": "Traditional Predictor Guidance"
+          },
+          {
+            "label": "(b)",
+            "title": "Multi-Objective Predictor Guidance"
+          },
+          {
+            "label": "(c)",
+            "title": "Neighboring Evolution"
+          }
+        ]
+      },
+      "S3.F2": {
+        "printed_figure_numbers": [
+          2
+        ],
+        "internal_panels": [
+          {
+            "label": "(a)",
+            "title": "Convex PF"
+          },
+          {
+            "label": "(b)",
+            "title": "Non-Convex PF w/o Filter"
+          },
+          {
+            "label": "(c)",
+            "title": "Non-Convex PF w Filter"
+          }
+        ]
+      },
+      "A1.F5": {
+        "printed_figure_numbers": [
+          3,
+          4,
+          5
+        ],
+        "panel_letters": null,
+        "note": "Three independently captioned figures, arranged left to right: 3, 4, 5."
+      },
+      "A1.F8": {
+        "printed_figure_numbers": [
+          6,
+          7,
+          8
+        ],
+        "panel_letters": null,
+        "note": "Three independently captioned figures, arranged left to right: 6, 7, 8."
+      },
+      "A1.F10": {
+        "printed_figure_numbers": [
+          9,
+          10
+        ],
+        "panel_letters": null,
+        "note": "Two independently captioned figures, arranged left to right: 9, 10."
+      },
+      "A1.F11": {
+        "printed_figure_numbers": [
+          11
+        ],
+        "panel_letters": null,
+        "internal_panels": [
+          {
+            "position": "left",
+            "label": null,
+            "title": "Illustration on C-10/MOP1"
+          },
+          {
+            "position": "right",
+            "label": null,
+            "title": "Illustration on MO-Hopper"
+          }
+        ],
+        "note": "One common Figure 11 caption. The two plots have titles, no printed (a)/(b) labels."
+      },
+      "A1.F12": {
+        "printed_figure_numbers": [
+          12
+        ],
+        "panel_letters": null,
+        "internal_panels": [
+          {
+            "position": "left",
+            "caption_reference": "(1)",
+            "label": null
+          },
+          {
+            "position": "middle",
+            "caption_reference": "(2)",
+            "label": null
+          },
+          {
+            "position": "right",
+            "caption_reference": "(3)",
+            "label": null
+          }
+        ],
+        "note": "The caption describes cases (1), (2), (3); no number labels are printed above or beneath the individual pies."
+      }
+    }
+  }
+}

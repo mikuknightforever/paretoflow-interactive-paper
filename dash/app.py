@@ -3,7 +3,7 @@ import os
 import csv
 import numpy as np
 import plotly.graph_objects as go
-from dash import Dash, Input, Output, State, ctx, dcc, html, no_update
+from dash import Dash, ClientsideFunction, Input, Output, State, ctx, dcc, html, no_update
 from flask import jsonify
 from model import DATA, META, MODES, COLORS, HV, view, nondominated
 
@@ -65,14 +65,12 @@ def select(click,selected,clear,current):
     return ids or no_update
 
 
-@app.callback(Output('clock','disabled'),Output('play','children'),Output('step','value'),Input('play','n_clicks'),Input('clock','n_intervals'),State('clock','disabled'),State('step','value'),prevent_initial_call=True)
-def replay(clicks,ticks,disabled,step):
-    if ctx.triggered_id=='play':
-        if disabled:
-            return False,'❚❚ Pause',124 if step>=160 else step
-        return True,'▶ Replay',no_update
-    next_step=min(160,step+2)
-    return next_step>=160,'▶ Replay' if next_step>=160 else '❚❚ Pause',next_step
+# Pause locally so a later tick cannot replace an in-flight server pause request.
+app.clientside_callback(
+    ClientsideFunction(namespace='paretoPlayback',function_name='explorerControl'),
+    Output('clock','disabled'),Output('play','children'),Output('step','value'),
+    Input('play','n_clicks'),Input('clock','n_intervals'),
+    State('clock','disabled'),State('step','value'),prevent_initial_call=True)
 
 
 @app.callback(Output('cloud','figure'),Output('design','figure'),Output('progress','figure'),Output('stats','children'),Output('detail','children'),Output('time-label','children'),
@@ -149,6 +147,8 @@ from panels import make_panels
 PANELS = make_panels(server, render, style)
 from paper_views import make_paper_panels
 PAPER_PANELS = make_paper_panels(server)
+from process_view import make_process_panel
+PROCESS_PANEL = make_process_panel(server)
 
 
 if __name__=='__main__':

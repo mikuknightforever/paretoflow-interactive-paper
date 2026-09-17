@@ -1,9 +1,29 @@
 figure.pareto-panel{width:100%;min-height:0;background:transparent;container-type:inline-size}
-figure.pareto-panel>div>div:has(>iframe){width:100%!important;height:470px;padding-bottom:0!important;overflow:hidden;border:1px solid #dce5ed;border-radius:4px;background:#fff}
+figure.pareto-panel>div>div:has(>iframe){width:100%!important;height:470px;padding-bottom:0!important;overflow:hidden;border:1px solid #dce5ed;border-radius:10px;background:#f3f7f8}
 figure.panel-evolution>div>div:has(>iframe){height:450px}
-figure.panel-guidance>div>div:has(>iframe){height:535px}
-figure.panel-method>div>div:has(>iframe){height:455px}
-figure.panel-paper>div>div:has(>iframe),figure.panel-neighbors>div>div:has(>iframe){height:490px}
+figure.panel-process>div>div:has(>iframe){height:1330px}
+figure.panel-guidance>div>div:has(>iframe){height:820px}
+figure.panel-method>div>div:has(>iframe){height:950px}
+figure.panel-paper>div>div:has(>iframe){height:490px}
+figure.panel-neighbors>div>div:has(>iframe){height:900px}
 figure.pareto-panel>figcaption{margin-top:.75rem}
+.edition-note{border-left:3px solid #6a8093;background:rgba(120,140,155,.1);padding:.9rem 1rem;margin:1.5rem 0;font-size:.92em}
+.interactive-addition{container-type:inline-size;border:1px solid #8295a84d;background:rgba(120,140,155,.06);border-radius:12px;padding:1rem;margin:2rem 0}
+.original-authors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem 1.5rem;font-size:.9em}
+.original-algorithm{border-top:1px solid #9aa7b3;border-bottom:1px solid #9aa7b3;padding:1rem 0;margin:1.5rem 0}
+.original-algorithm p{margin:.4rem 0}
+.original-table{position:relative;overflow-x:auto;max-width:100%}
+.original-table>.overflow-auto{position:relative}
+.original-table table{font-size:.82em;white-space:nowrap}
+.original-figure img{height:auto;max-width:100%}
+.original-figure-pair{display:flex;flex-wrap:wrap;align-items:center;gap:2%}
+.original-figure-pair>img{width:49%!important;max-width:49%;margin:0!important}
+.original-figure-pair>figcaption{flex:0 0 100%}
+@media(max-width:600px){.original-authors{grid-template-columns:1fr}.interactive-addition{padding:.65rem}}
 @container(max-width:622px){figure.panel-design>div>div:has(>iframe){height:760px}figure.panel-ablation>div>div:has(>iframe){height:510px}}
-@container(max-width:560px){figure.panel-paper>div>div:has(>iframe),figure.panel-neighbors>div>div:has(>iframe){height:550px}figure.panel-guidance>div>div:has(>iframe){height:575px}figure.panel-method>div>div:has(>iframe){height:490px}}
+@container(max-width:622px){figure.panel-process>div>div:has(>iframe){height:1670px}}
+@container(max-width:620px){figure.panel-method>div>div:has(>iframe){height:1380px}figure.panel-guidance>div>div:has(>iframe){height:1150px}figure.panel-neighbors>div>div:has(>iframe){height:1380px}}
+@container(max-width:440px){figure.panel-method>div>div:has(>iframe){height:1740px}figure.panel-guidance>div>div:has(>iframe){height:1400px}figure.panel-neighbors>div>div:has(>iframe){height:1660px}}
+
+/* Compact only the end-of-article references; citation previews keep their own typography. */
+article.myst-article > #source-bib ~ p[id^="source-bib-bib"]{font-size:.875em;line-height:1.55;margin-bottom:1em}

@@ -203,31 +203,12 @@ def cost_view(scope):
 
 
 def make_paper_panels(server):
-    apps={}
-    for name in ['method','guidance','neighbors','ranks','benchmarks','paper-ablation','cost','tables']:
+    from method_atelier import create_method_panel
+    from geometry_atelier import create_geometry_panels
+    apps = {'method': create_method_panel(server), **create_geometry_panels(server)}
+    for name in ['ranks','benchmarks','paper-ablation','cost','tables']:
         apps[name]=Dash('paper_'+name.replace('-','_'),server=server,url_base_pathname=f'/{name}/',assets_folder='assets',title='ParetoFlow · '+name)
         server.add_url_rule('/'+name,endpoint='paper_redirect_'+name,view_func=lambda name=name:redirect('/'+name+'/'))
-    method=apps['method']
-    method.layout=html.Div([head('One pass through ParetoFlow','METHOD WALKTHROUGH','S3'),
-        dcc.RadioItems(id='method-step',options=[{'label':str(i+1),'value':i} for i in range(7)],value=0,inline=True,className='method-steps'),
-        dcc.Graph(id='method-plot',config=CONFIG,style={'height':'170px'}),html.Div(id='method-detail',className='method-detail'),
-        foot('Select a stage to connect the algorithm’s operations. This is an explanatory diagram, not a recorded trajectory.')],className='paper-panel')
-    method.callback(Output('method-plot','figure'),Output('method-detail','children'),Input('method-step','value'))(method_view)
-    guidance=apps['guidance']
-    guidance.layout=html.Div([head('Why a weighted sum needs local filtering','GEOMETRIC ILLUSTRATION','S3.SS1'),
-        html.Div([dropdown('front-shape',[('nonconvex','Non-convex · ZDT2 front'),('convex','Convex · ZDT1 front')],'nonconvex'),
-            dcc.Checklist(id='cone',options=[{'label':'Local cone','value':'on'}],value=['on'])],className='paper-controls'),
-        html.Div([html.Span('Weight ω₁'),dcc.Slider(id='weight',min=.1,max=.9,step=.05,value=.5,marks={.1:'0.1',.5:'0.5',.9:'0.9'})],className='paper-slider'),
-        graph('guidance-plot'),html.Div(id='guidance-detail',className='mini-readout'),
-        foot('Analytic front, 501 reference points, fixed 8° half-cone for illustration. The real algorithm uses predicted objectives and a direction-dependent cone.')],className='paper-panel')
-    guidance.callback(Output('guidance-plot','figure'),Output('guidance-detail','children'),Input('front-shape','value'),Input('weight','value'),Input('cone','value'))(guidance_view)
-    neighbor=apps['neighbors']
-    neighbor.layout=html.Div([head('Borrow proposals from nearby directions','CONSTRUCTED EXAMPLE','S3.SS2'),
-        html.Div([dropdown('neighbor-direction',[(i,f'Direction {i+1}') for i in range(9)],4),dropdown('neighbor-k',[(1,'K = 1'),(3,'K = 3'),(5,'K = 5')],3),
-            dropdown('neighbor-stage',[('pool','1 · Pool'),('filter','2 · Filter'),('select','3 · Select')],'pool')],className='paper-controls'),
-        graph('neighbor-plot'),html.Div(id='neighbor-detail',className='mini-readout'),
-        foot('Nine constructed directions, three proposals each, fixed 20° half-cone. Colors reveal pooling and selection; these points are not experimental samples.')],className='paper-panel')
-    neighbor.callback(Output('neighbor-plot','figure'),Output('neighbor-detail','children'),Input('neighbor-direction','value'),Input('neighbor-k','value'),Input('neighbor-stage','value'))(neighbor_view)
     rank=apps['ranks']
     choices=[(m,m) for m in METHODS if m!='ParetoFlow']
     rank.layout=html.Div([head('Compare average rank across task families','PAPER RESULTS','S4.T1'),

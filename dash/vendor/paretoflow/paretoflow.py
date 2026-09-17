@@ -585,6 +585,7 @@ class ParetoFlow:
         t_threshold: float = 0.8,
         adaptive: bool = False,
         gamma: float = 2.0,
+        trace_callback: Callable | None = None,
     ) -> List[torch.Tensor]:
         """
         T: the number of steps to generate the samples
@@ -599,6 +600,7 @@ class ParetoFlow:
         t_threshold: the threshold to switch the sampling method
         adaptive: whether to use the adaptive time steps
         gamma: the gamma parameter
+        trace_callback: optional read-only observer of actual sampling steps
         return: the pareto set of the generated samples
         """
         all_x = self.task.input_x.copy()
@@ -691,8 +693,21 @@ class ParetoFlow:
             # shape: (batch_size, D)
             x_t = self._sample_base(torch.empty(batch_size, self.D)).to(device)
 
+            def emit_trace(phase, step, t, **record):
+                if trace_callback is not None:
+                    trace_callback(
+                        phase=phase, step=step, time=float(t),
+                        objectives_weights=objectives_weights,
+                        neighborhood_indices=neighborhood_indices, phi=phi,
+                        **record,
+                    )
+
+            emit_trace('initial', 0, 0.0, state_before=x_t, state_after=x_t,
+                       archive_before=pareto_set, archive_after=pareto_set)
+
             # Euler method
-            for t in ts[1:]:
+            for step, t in enumerate(ts[1:], start=1):
+                state_before = x_t
                 # this is x_t + v(x_t, t, y) * delta_t
                 # shape: (batch_size, D)
                 x_t = x_t + self._weighted_conditional_vnet(
@@ -712,6 +727,9 @@ class ParetoFlow:
                             xu[0].unsqueeze(0).repeat(batch_size, 1),
                         )
                     self.record_archive(t, pareto_set)
+                    emit_trace('transport', step, t, state_before=state_before,
+                               state_after=x_t, archive_before=pareto_set,
+                               archive_after=pareto_set)
                     pbar.update(1)
                     continue
 
@@ -799,6 +817,8 @@ class ParetoFlow:
                 # shape: (batch_size, D)
                 next_offspring = neighborhood_designs[torch.arange(batch_size), index]
 
+                archive_before = list(pareto_set) if trace_callback is not None else None
+
                 # Update the pareto set. If the new offspring is better
                 # than the i-th solution in the pareto set,
                 # replace the i-th solution with the new offspring
@@ -816,6 +836,14 @@ class ParetoFlow:
                 # Update x_t
                 x_t = next_offspring
                 self.record_archive(t, pareto_set)
+                emit_trace(
+                    'selection', step, t, state_before=state_before, state_after=x_t,
+                    archive_before=archive_before, archive_after=pareto_set,
+                    neighborhood_designs=neighborhood_designs,
+                    merged_samples_x_1=merged_samples_x_1,
+                    neighborhood_scores=neighborhood_scores, angles=angles,
+                    angle_filter_mask=angle_filter_mask, index=index, offspring_count=O,
+                )
                 pbar.update(1)
 
         temp_pareto_set = [pareto_set[i][0] for i in range(batch_size)]
