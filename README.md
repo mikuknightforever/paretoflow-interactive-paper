@@ -1,5 +1,11 @@
 # ParetoFlow · Interactive Paper Demo
 
+> **The project is now maintained in two independent repositories:**
+> - **[paretoflow-myst](https://github.com/mikuknightforever/paretoflow-myst)** — article, appendix, original figures, references and reading supplements.
+> - **[paretoflow-dash](https://github.com/mikuknightforever/paretoflow-dash)** — interactive dashboards, recorded data, reproduction scripts and tests.
+>
+> Both repositories preserve their relevant history from this combined release. Use their README files for current setup instructions. This repository retains the combined version as a historical snapshot; its older directory layout is documented below.
+
 保留 ParetoFlow 原论文的正文和结构，在相关段落加入可操作的交互图，帮助理解采样、邻域交换、过滤、选择和档案更新。主文嵌入 4 个交互面板，独立的本地实验补充页另有 4 个；原文附录保留发表的图表。
 
 文章与 Dash 服务独立，使用标准 MyST `article-theme`，并附带一个经过检查的引用悬浮预览补丁。这个项目用于展示论文方法和证据，不是作者的官方项目，也不是完整复现实验。
